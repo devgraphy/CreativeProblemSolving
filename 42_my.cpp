@@ -10,9 +10,6 @@ int main() {
 		cin >> v[i];
 	}
 	sort(v.begin(), v.end());		//3. 정렬
-	for (int i = 0; i < N; i++) {
-		cout << v[i] << " ";
-	}
 	int left = 0, right = N - 1;	//4. 초기화
 	int pivot;
 	while (left != right) {			//5. 이분 탐색
@@ -24,8 +21,9 @@ int main() {
 			right = pivot;
 		}
 		else if (v[pivot] == M) {
-			cout << pivot << endl;
+			cout << pivot+1 << endl;
 			break;
 		}
 	}
 }
+
