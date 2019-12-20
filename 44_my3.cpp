@@ -55,6 +55,7 @@ int main() {
 		p2 = 1;
 		chk = false;
 		while (p2 < N) {
+<<<<<<< HEAD
 			if (a[p2] - a[p1] >= mid) {		//5.
 				cnt++;							
 				if (a[p2] - a[p1] == mid)		//6.
@@ -68,16 +69,39 @@ int main() {
 		if (cnt >= C) {						//9.
 			left = mid + 1;
 			if (chk == true) {					//10.
+=======
+			if (a[p2] - a[p1] >= mid) {
+				cnt++;
+				if (a[p2] - a[p1] == mid)
+					chk = true;
+				p1 = p2;
+				p2++;
+			}
+			else
+				p2++;
+		}
+		if (cnt >= C) {
+			left = mid + 1;
+			if (chk == true) {
+>>>>>>> 7e9e07c8e36f3c27cf9a8fafd73d9543fce1f286
 				if (ans < mid)
 					ans = mid;
 			}
 		}
+<<<<<<< HEAD
 		else {								//11.
+=======
+		else {
+>>>>>>> 7e9e07c8e36f3c27cf9a8fafd73d9543fce1f286
 			right = mid - 1;
 		}
 
 	}
+<<<<<<< HEAD
 	cout << ans << endl;					//12.
+=======
+	cout << ans << endl;
+>>>>>>> 7e9e07c8e36f3c27cf9a8fafd73d9543fce1f286
 }
 
 /*해당 알고리즘에서 증명해야할 부분
