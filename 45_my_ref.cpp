@@ -16,11 +16,7 @@
 ▣ 출력예제 1
 7
 
-<<<<<<< HEAD
 Psuedo code(조세퍼스 문제)
-=======
-Psuedo code
->>>>>>> f49eca44f02f53e0190db5e7df768ae078371d50
 1.N K 입력 (temp = N 하나의 원소가 남은 상황을 캐치하기 위해)
 2.while 1 순회하면서
 	3. 원소값이 0이면 cnt 증가
