@@ -1,7 +1,7 @@
-/*¿µÁö(territory)¼±ÅÃ (large)
-ÇÙ½É:
-¹Ýº¹ÀûÀ¸·Î °è»êµÇ´Â °ÍµéÀÇ °è»ê È½¼ö¸¦ ÁÙÀÌ±â À§ÇØ ÀÌÀü¿¡ °è»êÇß´ø °ªÀº ¹è¿­¿¡ ÀúÀåÇØ µÎ¾ú´Ù°¡ ³ªÁß¿¡ Àç»ç¿ëÇÏ´Â ±â¹ý
-cin, cout ÀÔÃâ·Â ¶óÀÌºê·¯¸®·Î ÀÎÇÑ time limit ÇØ°á
+/*ì˜ì§€(territory)ì„ íƒ (large)
+í•µì‹¬:
+ë°˜ë³µì ìœ¼ë¡œ ê³„ì‚°ë˜ëŠ” ê²ƒë“¤ì˜ ê³„ì‚° íšŸìˆ˜ë¥¼ ì¤„ì´ê¸° ìœ„í•´ ì´ì „ì— ê³„ì‚°í–ˆë˜ ê°’ì€ ë°°ì—´ì— ì €ìž¥í•´ ë‘ì—ˆë‹¤ê°€ ë‚˜ì¤‘ì— ìž¬ì‚¬ìš©í•˜ëŠ” ê¸°ë²•
+cin, cout ìž…ì¶œë ¥ ë¼ì´ë¸ŒëŸ¬ë¦¬ë¡œ ì¸í•œ time limit í•´ê²°
 */
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -15,11 +15,11 @@ int main() {
 	for (i = 1; i <= H; i++) {
 		for (j = 1; j <= W; j++) {
 			scanf("%d", &a[i][j]);
-			mem[i][j] = a[i][j] + mem[i - 1][j] + mem[i][j - 1] - mem[i - 1][j - 1];//ÀÔ·Â°ú µ¿½Ã¿¡ ¸Þ¸ðÀÌÁ¦ÀÌ¼Ç
+			mem[i][j] = a[i][j] + mem[i - 1][j] + mem[i][j - 1] - mem[i - 1][j - 1];//ìž…ë ¥ê³¼ ë™ì‹œì— ë©”ëª¨ì´ì œì´ì…˜
 		}
 	}
 	scanf("%d %d", &H2, &W2);
-	//³ª¹« ¼ö ±¸ÇÏ±â
+	//ë‚˜ë¬´ ìˆ˜ êµ¬í•˜ê¸°
 	for (i = H2; i <= H; i++) {
 		for (j = W2; j <= W; j++) {
 			tree = mem[i][j] - (mem[i - H2][j] + mem[i][j - W2]) + mem[i - H2][j - W2];
